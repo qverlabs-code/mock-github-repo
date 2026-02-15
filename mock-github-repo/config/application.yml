@@ -1,0 +1,50 @@
+# Application configuration – hardcoded secrets in YAML.
+# Agent 2 scans .yml files for secrets and PII.
+
+server:
+  port: 8080
+  host: 0.0.0.0
+
+database:
+  # VIOLATION (Agent 2): Database URL (CRITICAL)
+  url: postgresql://admin:ProdDBPass2024@db.company.internal:5432/enterprise
+  pool_size: 20
+
+redis:
+  host: redis.internal
+  port: 6379
+  # VIOLATION (Agent 2): Password (HIGH)
+  password: "RedisSecretP@ss2024!"
+
+aws:
+  region: ap-south-1
+  # VIOLATION (Agent 2): AWS credentials (CRITICAL)
+  access_key_id: "AKIAIOSFODNN7EXAMPLE"
+  secret_access_key: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+  s3_bucket: enterprise-documents
+
+authentication:
+  # VIOLATION (Agent 2): JWT secret (HIGH)
+  jwt_secret: "jwt-signing-key-abc123def456ghi789jkl012mno345pqr678stu901"
+  token_expiry: 3600
+  # VIOLATION (Agent 2): API key (HIGH)
+  api_key: "sk_live_ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+
+smtp:
+  host: smtp.company.com
+  port: 587
+  # VIOLATION (Agent 2): Password (HIGH)
+  password: "SmtpP@ssword2024!"
+
+payment_gateway:
+  razorpay:
+    # VIOLATION (Agent 2): API key (HIGH)
+    api_key: "rzp_live_ABCDEFGHIJklmnop"
+    api_secret: "SecretKeyForRazorpay123456789012"
+
+# Test PII data (shouldn't be in config)
+test_data:
+  aadhaar: "298765432109"
+  pan: "ABCPF1234A"
+  mobile: "+919876543210"
+  credit_card: "4532015112830366"

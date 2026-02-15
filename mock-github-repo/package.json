@@ -1,0 +1,17 @@
+{
+  "name": "indian-enterprise-crm",
+  "version": "1.0.0",
+  "description": "Enterprise CRM system for Indian businesses – DPDPA Auditor demo repository",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "pg": "^8.11.0"
+  }
+}
