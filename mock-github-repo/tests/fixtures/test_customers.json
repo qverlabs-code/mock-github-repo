@@ -1,0 +1,85 @@
+{
+  "description": "Test customer fixtures with PII. Agent 2 categorizes this as 'fixture' file (+0.1 confidence boost).",
+  "customers": [
+    {
+      "id": 1,
+      "full_name": "Rajesh Kumar",
+      "email": "rajesh.kumar@example.com",
+      "phone": "+919876543210",
+      "aadhaar_number": "298765432109",
+      "pan_card": "ABCPF1234A",
+      "passport": "A1234567",
+      "voter_id": "ABC1234567",
+      "driving_license": "MH-0220140123456",
+      "upi_id": "rajesh@oksbi",
+      "bank_account": "50100012345678",
+      "ifsc_code": "SBIN0001234",
+      "credit_card": "4532015112830366",
+      "gstin": "27AABCU9603R1ZP",
+      "pin_code": "400001",
+      "date_of_birth": "1990-05-15"
+    },
+    {
+      "id": 2,
+      "full_name": "Priya Sharma",
+      "email": "priya.sharma@example.com",
+      "phone": "+919123456789",
+      "aadhaar_number": "345678901234",
+      "pan_card": "BCDPG5678B",
+      "passport": "B2345678",
+      "voter_id": "DEF2345678",
+      "driving_license": "KA-0120150234567",
+      "upi_id": "priya@paytm",
+      "bank_account": "60200023456789",
+      "ifsc_code": "HDFC0001234",
+      "credit_card": "5212345678901234",
+      "gstin": "29BCDPG5678B1ZQ",
+      "pin_code": "560001",
+      "date_of_birth": "1985-12-20"
+    },
+    {
+      "id": 3,
+      "full_name": "Amit Patel",
+      "email": "amit.patel@example.com",
+      "phone": "+918765432109",
+      "aadhaar_number": "456789012345",
+      "pan_card": "CDEQH9012C",
+      "passport": "C3456789",
+      "voter_id": "GHI3456789",
+      "driving_license": "DL-0320160345678",
+      "upi_id": "amit@ybl",
+      "bank_account": "70300034567890",
+      "ifsc_code": "ICIC0002345",
+      "credit_card": "371234567890123",
+      "gstin": "07CDEQH9012C1ZR",
+      "epf_uan": "100123456789",
+      "esic": "12345678901234567",
+      "epic": "JKL4567890",
+      "ration_card": "DL1234567890",
+      "pin_code": "110001",
+      "date_of_birth": "1978-03-10"
+    }
+  ],
+  "children_test_data": [
+    {
+      "id": 100,
+      "child_name": "Arjun Kumar",
+      "date_of_birth": "2012-08-15",
+      "age": 12,
+      "parent_aadhaar": "298765432109",
+      "parent_mobile": "+919876543210",
+      "is_minor": true,
+      "guardian_name": "Rajesh Kumar"
+    },
+    {
+      "id": 101,
+      "child_name": "Ananya Sharma",
+      "date_of_birth": "2015-03-22",
+      "age": 9,
+      "parent_aadhaar": "345678901234",
+      "parent_mobile": "+919123456789",
+      "is_minor": true,
+      "guardian_name": "Priya Sharma"
+    }
+  ]
+}
